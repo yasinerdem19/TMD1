@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MODELLEME
 {
-    public class Arac
+    public class Arac:Tasit
     {
         #region Fields değişkenleri
         private string marka, model, renk;
@@ -21,7 +21,7 @@ namespace MODELLEME
         #endregion
 
         #region Constructors
-        public Arac(string marka, string model, 
+        public Arac(string marka, string model,
             string renk, int yil)
         {
             Marka = marka;
@@ -29,6 +29,7 @@ namespace MODELLEME
             Renk = renk;
             Yil = yil;
         }
+
         public Arac()
         {
 
@@ -40,6 +41,21 @@ namespace MODELLEME
            Console.WriteLine("Araç Çalıştı!");
         public void Durdur() =>
                    Console.WriteLine("Araç Durdu!");
+
+        public override string ToString()
+        {
+            Console.WriteLine(new string('-',30));
+            Console.WriteLine($"{this.Marka}");//this de gereksiz aslında
+            Console.WriteLine($"{this.Model}");
+            Console.WriteLine($"{Renk}");
+            Console.WriteLine($"{Yil}");
+            Console.WriteLine($"{this.Motor}");
+            Console.WriteLine($"{Hacim}");
+            //Console.WriteLine();
+            Console.WriteLine(new string('-', 30));
+            return Marka
+                ;
+        }
 
         #endregion
 
